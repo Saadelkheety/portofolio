@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>image gallery</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<style type="text/css">
+		body{
+
+				margin: 1% 0;
+				text-align:center;
+				font-size:1.2em;
+				font-family:sans-serif;
+				color:#D49F2A;
+			}
+			img{
+				width:23%;
+				margin: 2% 1%;
+				transition: box-shadow 1s, transform 1s, width 2s;
+				vertical-align:middle;
+			}
+			img:hover{
+				box-shadow: 1vw 1vw rgba(1,1,1,0.5);
+				transform: scale(1.01);
+				
+				
+			}
+			img:focus{
+				width:35%;
+				box-shadow: 3vw 3vw rgba(1,1,1,0.5);
+				transform:none;
+				
+			}
+@media only screen and (max-width:900px){
+				body{
+					margin:0;
+				}
+				img{
+					width:35%;
+					
+				}
+				img:focus{
+					width:50%;
+					box-shadow: 3vw 3vw rgba(1,1,1,0.5);
+					transform:none;
+				}
+			}
+			@media only screen and (max-width:600px){
+				body{
+					margin:0;
+          font-size:0.8em;
+				}
+				img{
+					width:75%;
+					
+				}
+				img:focus{
+					width:95%;
+					box-shadow: 3vw 3vw rgba(1,1,1,0.5);
+					transform:none;
+				}
+			}
+	</style>
+</head>
+<body>
+	<h1>Phoenix Photography</h1>
+
+		<h2>A photo gallery of Ireland</h2>
+		<p>Click on an image to enlarge it, you can also use <b>the tab key</b> to navigate to the next image.</p>
+			
+		<img tabindex="1" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1c/Stift_G%C3%B6ttweig_Gobelinzimmer_01.JPG/300px-Stift_G%C3%B6ttweig_Gobelinzimmer_01.JPG" alt="Image of Ireland">
+		<img tabindex="2" src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/15/Lijiang_Yunnan_China-Naxi-people-carrying-baskets-01.jpg/300px-Lijiang_Yunnan_China-Naxi-people-carrying-baskets-01.jpg" alt="Image of Ireland">
+		<img tabindex="3" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/68/Barnard_33.jpg/300px-Barnard_33.jpg" alt="Image of Ireland">
+		<img tabindex="4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Shopping_Center_Magna_Plaza_Amsterdam_2014.jpg/2560px-Shopping_Center_Magna_Plaza_Amsterdam_2014.jpg" alt="Image of Ireland">
+		<img tabindex="5" src="../image_gallery/img/img_5.jpg">
+		<img tabindex="6" src="../image_gallery/img/img_4.jpg" alt="Image of Ireland">
+		<img tabindex="7" src="../image_gallery/img/img_3.jpg" alt="Image of Ireland">
+		<img tabindex="8" src="../image_gallery/img/img_2.jpg" alt="Image of Ireland">
+		<img tabindex="9" src="../image_gallery/img/img_1.jpg">
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Work station</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style type="text/css">
+		main{
+  margin: 2%;
+  text-align:center;
+}
+#header{
+  position:fixed;
+  top: 0;
+  right: 0;
+  width:100%;
+  display:flex;
+  height:10vh;
+  background:#fff;
+  align-items: center;
+  justify-content:space-between;
+}
+#header-img{
+  max-width:30%;
+  max-height:100%;
+}
+ #slogan{
+  margin-right: auto;
+}
+#nav-bar{
+  display:flex;
+  margin-right:5%;
+}
+
+#header nav a{
+  padding:3%;
+  margin-right: 5%;
+  text-decoration:none;
+  color:black;
+}
+@media only screen and (max-width: 600px){
+  #slogan{
+    display:none;
+  }
+  #nav-bar{
+  display:flex;
+  width: 70%;
+  margin: 0;
+}
+#header nav a{
+  margin-right: 1%;
+  padding-right: 2% ;
+}
+}
+
+
+#form{
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+}
+#form h1{
+  margin-top:13vh;
+}
+#email{
+  margin-bottom:2%;
+  width:40%;
+  height:25px;
+}
+
+#video{
+  display:block;
+  width:100%;
+  max-width:700px;
+  height:50vw;
+  max-height:70vh;
+  margin:2% auto;
+}
+
+#about-image{
+  max-width:100%;
+  max-height:100px;
+}
+#services{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:space-around;
+}
+#services figure{
+  max-width:40%;
+  flex-shrink:1;
+  background:#efefef;
+  
+}
+#services img{
+  max-width:100%;
+}
+#pricing header{
+  background:#ddd;
+}
+#pricing {
+  font-size:22px;
+  margin:4%;
+}
+#pricing b{
+  font-size:72px;
+}
+#pricing em{
+  font-size:42px;
+}
+#pricing div{
+  border: outset;
+  margin: 2% 0;
+}
+@media only screen and (max-width: 870px){
+  #services figure{
+  max-width:80%;
+  }
+}
+	</style>
+</head>
+<body>
+  <main id="home">
+  <header id="header">
+ 
+    <img src="http://workstation-eg.co/wp-content/uploads/2016/01/logo-home1.png" alt="workstation logo" id="header-img">
+    <h4 id="slogan">Incubating excellence</h4>
+
+    <nav id="nav-bar">
+      <a href="#home" class="nav-link">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#pricing" class="nav-link">Pricing</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+  </header>
+  <form  action="https://www.freecodecamp.com/email-submit" target="_blank" id="form">
+    <h1>get workstation latest offers</h1>
+    <input placeholder="Enter your email address" name="email" id="email" type="email">
+    
+    <input id="submit"  type="submit" value="Get latest Updates"/>
+  </form>
+  
+  <iframe id="video" src="https://www.youtube.com/embed/RQKfaSHkTNM" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+  <hr/>
+  <article id="about">
+    <img id="about-image" src="http://workstation-eg.co/wp-content/uploads/2016/01/logo-home1.png" alt="Workstation logo">
+    <p>Workstation is a Co-Working Space in Alexandria. It’s a Spaceship that landed from space, built with premium standards under international measurements and techniques. It is a place where you can get your meetings done, shareable desks and private dedicated desks, training venues, interviews and workshops and more …
+</p>
+    <div id="services">
+      <figure>
+        <img src="http://workstation-eg.co/wp-content/uploads/2016/01/IMG_8542-1024x683.jpg" alt="coworking area">
+        <figcaption>coworking area</figcaption>
+      </figure>
+      <figure>
+        <img src="http://workstation-eg.co/wp-content/uploads/2016/01/IMG_8515-1024x683.jpg" alt="meeting room">
+        <figcaption>meeting room</figcaption>
+      </figure>
+    <figure>
+        <img src="http://workstation-eg.co/wp-content/uploads/2016/01/IMG_8373-1024x683.jpg" alt="lecture room">
+        <figcaption>lecture room</figcaption>
+      </figure>
+        <figure>
+        <img src="http://workstation-eg.co/wp-content/uploads/2016/01/IMG_8557-1024x683.jpg" alt="fully equiped kitchen">
+        <figcaption>fully equiped kitchen</figcaption>
+      </figure>
+         <figure>
+        <img src="http://workstation-eg.co/wp-content/uploads/2016/01/IMG_8485-1024x683.jpg" alt="facilitates">
+        <figcaption>all possible facilitattes for teaching and learning</figcaption>
+      </figure>
+         <figure>
+        <img src="http://workstation-eg.co/wp-content/uploads/2016/01/IMG_8461-1024x683.jpg" alt="reciption">
+        <figcaption>reciption area for clients</figcaption>
+      </figure>
+         
+    </div>
+  </article>
+  <hr/>
+  <article id="pricing">
+    <h2>Pricing</h2>
+    <div class="day-use">
+      <header>Day Use</header>
+      <em>EGP</em> <b>35</b> <br> for 3 Hrs.
+    </div>
+     <div class="hours-bundle">
+      <header>Hours Bundle</header>
+      <em>EGP</em> <b>100</b> <br> for 10 Hrs./Month
+    </div>
+     <div class="full-month">
+      <header>Full Month</header>
+      <em>EGP</em> <b>800</b> <br> for all the month.
+    </div>
+  </article>
+  <hr>
+  <footer id="contact">
+    Address: 29 Al-Fardous Street, Smouha, Alexandria, Egypt <br>
+    Landline: +2034241194 <br>
+    Mobile: +201096161099 <br>
+    E-mail: info@workstation-eg.co
+  </footer>
+</main>
+
+</body>
+</html>

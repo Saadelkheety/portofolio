@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>c programming</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<style type="text/css">
+		#main-doc{
+		  text-align:left;
+		}
+		code{
+		  display:block;
+		}
+		#navbar{
+		  display:block;
+		  position:fixed;
+		  max-width:30%;
+		  height: 100%;
+		  float:left;
+		  overflow:scroll;
+		  background-color: #efefef;
+		}
+		#main-doc{
+		  margin-left:30%;
+		}
+		@media only screen and (max-width: 600px){
+		  #navbar{
+		  display:inline;
+		  position:fixed;
+		  top:0 ;
+		  right:0;
+		  left:0;
+		  max-height:30vh;
+		  overflow:scroll;
+		  max-width:100%;
+		  background-color:#fefefe;
+		   
+		}
+		  #main-doc{
+		  margin-top:32vh;
+		  margin-left:1%;
+		}
+		}
+		 li {
+		  margin:1%;
+		  padding:1%;
+		  border:ridge;
+		  border-radius:10px;
+		}
+		ul :hover{
+		  background:#ddd;
+		}
+		a{
+		  text-decoration:none;
+		  color:black;
+		  width:100%;
+		}
+		ul{
+		  list-style-type:none;
+		}
+		header{
+		  font-size:28px;
+		  margin-left:2vw;
+		}
+		.btn {
+			z-index: 5;
+		}
+	</style>
+</head>
+	
+<nav id="navbar">
+  <header>Intro to C programming</header>
+  <ul>
+    <li><a class="nav-link" href="#C_Basic_Syntax">C Basic Syntax</a></li>
+    <li><a class="nav-link" href="#Tokens_in_C">Tokens in C</a></li>
+    <li><a class="nav-link" href="#Semicolons">Semicolons</a></li>
+    <li><a class="nav-link" href="#Comments">Comments</a></li>
+    <li><a class="nav-link" href="#Identifiers">Identifiers</a></li>
+    <li><a class="nav-link" href="#Keywords">Keywords</a></li>
+    <li><a class="nav-link" href="#Whitespace_in_C">Whitespace in C</a></li>
+    <li><a class="nav-link" href="#C_Data_Types">C Data Types</a></li>
+    <li><a class="nav-link" href="#Integer_Types">Integer Types</a></li>
+    <li><a class="nav-link" href="#Floating-Point_Types">Floating-Point Types</a></li>
+    <li><a class="nav-link" href="#The_void_Type">The void Type</a></li>
+    <li><a class="nav-link" href="#C_Variables">C Variables</a></li>
+    <li><a class="nav-link" href="#C_Constants_and_Literals">C Constants and Literals</a></li>
+    <li><a class="nav-link" href="#Integer_literals">Integer literals</a></li>
+    <li><a class="nav-link" href="#C_Operators">C Operators</a></li>
+    
+  </ul>
+</nav>
+<main id="main-doc">
+  <section class="main-section" id="C_Basic_Syntax">
+    
+    <header>C Basic Syntax</header>
+ 
+    <p>
+You have seen a basic structure of C program, so it will be easy to understand other
+basic building blocks of the C programming language.
+</p>
+</section>
+<section class="main-section" id="Tokens_in_C">
+  <header>Tokens in C</header>
+  <p>
+A C program consists of various tokens and a token is either a keyword, an identifier, a
+constant, a string literal, or a symbol. For example, the following C statement consists of
+five tokens:
+  </p>
+    <br>
+    <code>
+printf("Hello, World! \n");
+    </code>
+    <br>
+The individual tokens are:
+    <br>
+    <code>
+printf
+(
+"Hello, World! \n"
+) ;
+    </code>
+    <br>
+    </section>
+    <section class="main-section" id="Semicolons">
+      <header>Semicolons</header>
+      <p>
+In C program, the semicolon is a statement terminator. That is, each individual statement
+must be ended with a semicolon. It indicates the end of one logical entity.
+For example, following are two different statements:
+      </p>
+    <code>
+printf("Hello, World! \n");
+return 0;
+    </code>
+    </section>
+<section class="main-section" id="Comments">
+  <header>Comments</header>
+  <p>
+Comments are like helping text in your C program and they are ignored by the compiler.
+They start with /* and terminates with the characters */ as shown below:
+/* my first program in C */
+You cannot have comments within comments and they do not occur within a string or
+character literals.
+  </p>
+    </section>
+<section class="main-section" id="Identifiers">
+  <header>Identifiers</header>
+  <p>
+A C identifier is a name used to identify a variable, function, or any other user-defined
+item. An identifier starts with a letter A to Z or a to z or an underscore _ followed by zero
+or more letters, underscores, and digits (0 to 9).
+C does not allow punctuation characters such as @, $, and % within identifiers. C is a case
+sensitive programming language. Thus, Manpower and manpower are two different
+identifiers in C. Here are some examples of acceptable identifiers:
+mohd zara abc move_name a_123
+myname50 _temp j a23b9 retVal
+  </p>
+   
+    </section>
+    <section class="main-section" id="Keywords">
+      <header>Keywords</header>
+    
+    <p>
+The following list shows the reserved words in C. These reserved words may not be used as
+constant or variable or any other identifier names.
+auto else Long switch
+break enum register typedef
+case extern return union
+char float short unsigned
+const for signed void
+continue goto sizeof volatile
+default if static while
+do int struct _packed
+</p>
+    
+    </section>
+    <section class="main-section" id="Whitespace_in_C">
+      <header>Whitespace in C</header>
+    
+    <p>
+A line containing only whitespace, possibly with a comment, is known as a blank line, and a
+C compiler totally ignores it.
+Whitespace is the term used in C to describe blanks, tabs, newline characters and
+comments. Whitespace separates one part of a statement from another and enables the
+compiler to identify where one element in a statement, such as int, ends and the next
+element begins. Therefore, in the following statement:
+</p>
+    <br>
+    <code>
+int age;
+    </code>
+    <br>
+    <p>
+    There must be at least one whitespace character (usually a space) between int and age for
+the compiler to be able to distinguish them. On the other hand, in the following statement:
+</p>
+    <br>
+    <code>
+      fruit = apples + oranges; // get the total fruit
+    </code>
+<br>
+<p>
+No whitespace characters are necessary between fruit and =, or between = and apples,
+although you are free to include some if you wish for readability purpose.
+</p>
+    </>
+  </section>
+  <section class="main-section" id="C_Data_Types">
+    <header>C Data Types</header>
+    
+    <p>
+    In the C programming language, data types refer to an extensive system used for
+declaring variables or functions of different types. The type of a variable determines how
+much space it occupies in storage and how the bit pattern stored is interpreted.
+The types in C can be classified as follows:
+S.N. Types and Description
+</p>
+<p>
+1
+Basic Types:
+They are arithmetic types and consists of the two types: (a) integer types and (b) floatingpoint types.
+</p>
+<p>
+2
+Enumerated types:
+They are again arithmetic types and they are used to define variables that can only be
+assigned certain discrete integer values throughout the program.
+</p>
+<p>
+3 The type void:
+The type specifier void indicates that no value is available.
+</p>
+<p>
+4
+Derived types:
+They include (a) Pointer types, (b) Array types, (c) Structure types, (d) Union types and
+</p>
+<p>
+(e) Function types.
+The array types and structure types are referred to collectively as the aggregate types. The
+type of a function specifies the type of the function's return value. We will see basic types
+in the following section, whereas, other types will be covered in the upcoming chapters.
+</p>
+</section>
+<section class="main-section" id="Integer_Types">
+  <header>Integer Types</header>
+  <p>
+Following table gives you details about standard integer types with its storage sizes and
+value ranges:
+Type Storage size Value range
+Char 1 byte -128 to 127 or 0 to 255
+unsigned char 1 byte 0 to 255
+signed char 1 byte -128 to 127
+Int 2 or 4 bytes -32,768 to 32,767 or -2,147,483,648 to 2,147,483,647
+unsigned int 2 or 4 bytes 0 to 65,535 or 0 to 4,294,967,295
+Short 2 bytes -32,768 to 32,767
+unsigned short 2 bytes 0 to 65,535
+Long 4 bytes -2,147,483,648 to 2,147,483,647
+unsigned long 4 bytes 0 to 4,294,967,295
+To get the exact size of a type or a variable on a particular platform, you can use
+the sizeof operator. The expressions sizeof(type) yields the storage size of the object or
+type in bytes. Following is an example to get the size of int type on any machine:
+  </p>
+    <code>
+#include <stdio.h>
+#include <limits.h>
+int main()
+{
+printf("Storage size for int : %d \n", sizeof(int));
+return 0;
+}
+      </code>
+When you compile and execute the above program, it produces the following result on
+Linux:
+Storage size for int : 4
+</section>
+<section class="main-section" id="Floating-Point_Types">
+  <header>Floating-Point Types</header>
+Following table gives you details about standard floating-point types with storage sizes and
+value ranges and their precision:
+Type Storage size Value range Precision
+float 4 byte 1.2E-38 to 3.4E+38 6 decimal places
+double 8 byte 2.3E-308 to 1.7E+308 15 decimal places
+long double 10 byte 3.4E-4932 to 1.1E+4932 19 decimal places
+The header file float.h defines macros that allow you to use these values and other details
+about the binary representation of real numbers in your programs. Following example will
+print storage space taken by a float type and its range values:
+      <code>
+#include <stdio.h>
+#include <float.h>
+int main()
+
+{
+printf("Storage size for float : %d \n", sizeof(float));
+printf("Minimum float positive value: %E\n", FLT_MIN );
+printf("Maximum float positive value: %E\n", FLT_MAX );
+printf("Precision value: %d\n", FLT_DIG );
+return 0;
+}
+        </code>
+When you compile and execute the above program, it produces the following result on
+Linux:
+Storage size for float : 4
+Minimum float positive value: 1.175494E-38
+Maximum float positive value: 3.402823E+38
+Precision value: 6
+   
+        </section>
+        <section class="main-section" id="The_void_Type">
+          <header>The void Type</header>
+       
+The void type specifies that no value is available. It is used in three kinds of situations:
+S.N. Types and Description
+1
+Function returns as void
+There are various functions in C which do not return value or you can say they return void.
+A function with no return value has the return type as void. For example, void exit (int
+status);
+2
+Function arguments as void
+There are various functions in C which do not accept any parameter. A function with no
+parameter can accept as a void. For example, int rand(void);
+3
+Pointers to void
+A pointer of type void * represents the address of an object, but not its type. For example,
+a memory allocation function void *malloc( size_t size ); returns a pointer to void which
+can be casted to any data type.
+The void type may not be understood to you at this point, so let us proceed and we will
+cover these concepts in the upcoming chapters.
+  
+  </section>
+  <section class="main-section" id="C_Variables">
+    <header>C Variables</header>
+    
+    Avariable is nothing but a name given to a storage area that our programs can
+manipulate. Each variable in C has a specific type, which determines the size and layout of
+the variable's memory; the range of values that can be stored within that memory; and the
+set of operations that can be applied to the variable.
+The name of a variable can be composed of letters, digits, and the underscore character. It
+must begin with either a letter or an underscore. Upper and lowercase letters are distinct
+because C is case-sensitive. Based on the basic types explained in previous chapter, there
+will be the following basic variable types:
+
+Char Typically a single octet(one byte). This is an integer type.
+Int The most natural size of integer for the machine.
+Float A single-precision floating point value.
+Double A double-precision floating point value.
+Void Represents the absence of type.
+C programming language also allows to define various other types of variables, which we
+will cover in subsequent chapters like Enumeration, Pointer, Array, Structure, Union, etc.
+For this chapter, let us study only basic variable types.
+
+        </section> 
+        <section class="main-section" id="C_Constants_and_Literals">
+         <header>C Constants and Literals</header>
+       
+          The constants refer to fixed values that the program may not alter during its
+execution. These fixed values are also called literals.
+Constants can be of any of the basic data types like an integer constant, a floating
+constant, a character constant, or a string literal. There are also enumeration
+constants as well.
+The constants are treated just like regular variables except that their values cannot be
+modified after their definition.
+     
+          </section>
+          <section class="main-section" id="Integer_literals">
+ <header>Integer literals</header>
+   
+An integer literal can be a decimal, octal, or hexadecimal constant. A prefix specifies the
+base or radix: 0x or 0X for hexadecimal, 0 for octal, and nothing for decimal.
+An integer literal can also have a suffix that is a combination of U and L, for unsigned and
+long, respectively. The suffix can be uppercase or lowercase and can be in any order.
+Here are some examples of integer literals:
+      
+          <code>
+         
+212 /* Legal */
+215u /* Legal */
+0xFeeL /* Legal */
+078 /* Illegal: 8 is not an octal digit */
+032UU /* Illegal: cannot repeat a suffix */
+Following are other examples of various types of Integer literals:
+85 /* decimal */
+0213 /* octal */
+0x4b /* hexadecimal */
+30 /* int */
+30u /* unsigned int */
+30l /* long */
+30ul /* unsigned long */
+</pre>
+          </code>
+        </section>
+        <section class="main-section" id="C_Operators">
+          <header>C Operators</header>
+       
+          An operator is a symbol that tells the compiler to perform specific mathematical or logical
+manipulations. C language is rich in built-in operators and provides the following types of
+<ul>
+operators:
+<li>Arithmetic Operators </li>
+<li>Relational Operators</li>
+<li>Logical Operators</li>
+<li>Bitwise Operators</li>
+<li>Assignment Operators</li>
+<li>Misc Operators </li>
+</ul>
+ 
+This tutorial will explain the arithmetic, relational, logical, bitwise, assignment and other
+operators one by one.
+Arithmetic Operators
+Following table shows all the arithmetic operators supported by C language. Assume
+variable A holds 10 and variable B holds 20, then:
+Operator Description Example
+
+      
++ Adds two operands A + B will give 30
+- Subtracts second operand from the first A - B will give -10
+* Multiplies both operands A * B will give 200
+/ Divides numerator by de-numerator B / A will give 2
+% Modulus Operator and remainder of after an integer division B % A will give 0
+          
+        </section>
+</main>
+<body>
+
+</body>
+</html>

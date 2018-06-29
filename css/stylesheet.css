@@ -1,0 +1,184 @@
+body > * {
+	box-sizing: border-box;
+}
+
+main {
+	background-color: #fff;
+	margin: 0 6%;
+	padding: 0 3%;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+.container-fluid {
+	margin: 0;
+	padding: 0;
+}
+
+#logo-header {
+	height: 12vh;
+	padding: 0 1vh;
+}
+
+#logo-header > img{
+	max-height: 100%;
+	max-width: 35%;
+	vertical-align: middle;
+}
+
+#name > * {
+	display: inline-block;
+	margin: 0;
+}
+
+#name {
+	display: inline-block;
+	float: right;
+	vertical-align: middle;
+	max-width: 65%;
+
+}
+
+#name > p {
+	display: block;
+	text-align: right;
+}
+
+#name > h1 {
+	text-align: right;
+	font-size:2em;
+}
+
+.navbar{
+	position: sticky;
+	top: 0;
+	left: 0;
+	z-index: 5;
+	display: block;
+	background-color: #efefef
+}
+
+.navbar-nav {
+	flex-direction: row;
+	justify-content: space-between;
+	width: 100%;
+	max-width: 400px;
+	margin: auto;
+}
+
+h2 {
+	display: inline-block;
+	margin: 5vh 1vw;
+}
+
+picture > img{
+	position: sticky;
+	top: 8vh;
+	left: 0;
+	z-index: -1;
+}
+
+figure  > figcaption > a{
+		color: #212529;
+
+	}
+
+@media (max-width: 400px) {
+	.col-12 {
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0;
+	}
+	figure {
+		position: relative;
+		text-align: center;
+	
+	}
+
+	figure > a > img{
+		filter: opacity(70%);
+	}
+
+	figure > figcaption > a{
+		position: absolute;
+		top: 20%;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		color: #212529;
+
+	}
+}
+
+
+
+@media (min-width: 400px) {
+	.col-12 {
+		max-width: 50%;
+		margin-left: 0;
+		margin-right: 0;
+		padding: 0;
+	}
+}
+
+h2 {
+	margin-top: 5vh;
+}
+
+
+@media (min-width: 670px) {
+	.col-12 {
+		max-width: 33.33%;
+	}
+	.col-12 > a > figcaption > h3 {
+		font-size: 1.3rem;
+	}
+
+	.col-12 > a > figcaption > p {
+		font-size: 0.8rem;
+	}
+	#contact {
+		float: right;
+	}
+	section {
+	display: inline-block;
+	max-width: 50%;
+	}
+}
+
+@media (min-width: 950px) {
+	.col-12 {
+		max-width: 25%;
+		margin: auto ;
+		padding: 0 1%;
+	}
+}
+@media (max-width: 380px) {
+	#name > p {
+	
+}
+
+#name > h1 {
+	font-size:1.7em;
+}
+}
+.icon {
+	max-width: 30px;
+	width: 100%;
+}
+footer{
+	text-align: center;
+	font-size: 12px;
+}
+footer > img {
+	max-height: 10vh;
+	max-width: 20vw;
+}
+#more {
+	display: inline-block;
+	width: 100%;
+	margin: 0;
+}

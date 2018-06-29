@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Image Gallery(Bootstrap, Jquery)</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src=" https://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<style type="text/css">
+		body{
+		  text-align:center;
+		}
+		.header{
+		  height:20vh;
+		  padding:4vh;
+		}
+		ul{
+		  position:fixed;
+		  width:100%;
+		  background:grey;
+		  opacity:1;
+		  z-index:1;
+		}
+		li{
+		  display:inline-block;
+		  margin:0% 1%;
+		  padding:1%;
+		}
+		a{
+		  color:white;
+		}
+
+		img{
+		  max-width:99%;
+		  margin-top:3%;
+		}
+		.small:hover{
+		  box-shadow: 0.3vw 0.3vw rgba(1,1,1,0.5);
+			transform: scale(1.01);
+		}
+		.big{
+		  margin-top:3vh;
+		  transform: none;
+		  width:90%;
+		}
+		
+		.slider > .col-md-1 {
+		  margin-top:25%;
+		}
+
+	</style>
+</head>
+<body class="container-fluid">
+	<div class="menue"></div>
+	  <ul>
+	  <li><a href="#">Home</a></li>
+	  <li><a href="#">About</a></li>
+	  <li><a href="#">Contact</a></li>
+	</ul>
+	<div class="header">
+	<h1>this is a gallery</h1>
+	<p>you can press <strong>tab</strong> to navigate the next image.</p>
+	</div>
+	<div class="container-fluid main">
+	  <div class="row">
+	    <div class="col-md-3">
+	      <img class="small img1" tabindex="1" src="img/img_1.jpg" alt="Image of Ireland">
+	      </div>
+	    <div class="col-md-3">
+			<img class="small img2" tabindex="2" src="img/img_2.jpg" alt="Image of Ireland">
+	    </div>
+	    <div class="col-md-3">
+			<img class="small" tabindex="3" src="img/img_3.jpg" alt="Image of Ireland">
+	    </div>
+	    <div class="col-md-3">
+			<img class="small img4" tabindex="4" src="img/img_4.jpg" alt="Image of Ireland">
+	    </div>
+	  </div>
+	  <div class="row">
+	    <div class="col-md-3">
+			<img class="small img5" tabindex="5" src="img/img_5.jpg" alt="Image of Ireland">
+	    </div>
+	    <div class="col-md-3">
+			<img class="small img6" tabindex="6" src="img/img_6.jpg" alt="Image of Ireland">
+	    </div>
+	    <div class="col-md-3">
+			<img class="small img7" tabindex="7" src="img/img_7.jpg" alt="Image of Ireland">
+	      </div>
+	    <div class="col-md-3">
+			<img class="small img8" tabindex="8" src="img/img_8.jpg" alt="Image of Ireland">
+	     </div>
+	    </div> 
+	 </div>
+	<h4>click on the image to pause or resume the auto navigation.</h4>
+	<div class="row slider">
+	  <div class="col-md-1">
+	    <button class="backword">&lt;</button>
+	  </div>
+	  <div class="col-md-10">
+	  <img class="big" src="img/img_5.jpg" alt="this is the selected image">
+	  </div>
+	  <div class="col-md-1">
+	    <button class="forword">&gt;</button>
+	  </div>
+	</div>
+	<script type="text/javascript">
+		//----- show the clicked image
+		$('.small').click(function(){
+		  $('.big').attr('src',$(this).attr('src'))
+		})
+		// var to control the showed image
+		var index = 1;
+		//choose the image reh]garding the the var and the buttons
+		$('.img'+index).click();
+		// forwoard button
+		$('.forword').click(function(){
+		  index=index+1;
+		  if(index>8){
+		    index=1;
+		  }
+		  $('.img'+index).click();
+		  
+		});
+		// backword button
+		$('.backword').click(function(){
+		  index =index-1;
+		  if(index<1){
+		    index=8;
+		  }
+		  $('.img'+index).click();
+		});
+		//change the image every time interval
+		var paused=false;
+		$('.big').click(function(){
+		  paused=!paused;
+		})
+		setInterval(function(){
+		  if(!paused){
+		  $('.forword').click();
+		  }
+		}, 3000);
+		//----------------change nav colors
+		$("a").hover(function(){
+		  $(this).css("color", "red");
+		}, 
+		function(){
+		  $(this).css("color", "white");
+		})
+	</script>     
+</body>
+</html>

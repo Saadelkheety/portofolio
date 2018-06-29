@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>animated cube</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<style type="text/css">
+		body{
+		  background:#000;
+		  color:#fff;
+		  text-align:center;
+		  font-size:5vw;
+		}
+		.container{
+		  width:30%;
+		  height:30%;
+		  margin:20% 40%;
+		}
+		.dice{
+		  
+		  transform-style:preserve-3d;
+		  animation: rotate 15s infinite alternate;
+		}
+		@keyframes rotate{
+		  0%{
+		    transform:rotateX(180deg) rotateY(80deg) rotateZ(180deg) translateZ(-10vw) ;
+		  }
+		}
+		.side{
+		  position:absolute;
+		  width:20vw;
+		  height:20vw;
+		  opacity:.8;
+		}
+		.one{
+		  background:#00FF00;
+		}
+		.two{
+		  background:#FF40FF;
+		  transform:translateZ(20vw);
+		}
+		.three{
+		  background:#3D9971;
+		  transform:rotateY(90deg) translateX(-10vw) translateZ(10vw);
+		}
+		.four{
+		  background:#9A14CC;
+		  transform:rotateY(-90deg) translateX(10vw) translateZ(10vw);
+		}
+		.five{
+		  background:#14CC7C;
+		  transform:rotateX(-90deg) translateZ(10vw) translateY(-10vw);
+		}
+		.six{
+		  background:#4319FF;
+		  transform:rotateX(90deg) translateZ(10vw) translateY(10vw);
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+  <div class="dice">
+    <div class="side one"> this is side one</div>
+    <div class="side two">this is side two</div>
+    <div class="side three">this is side three</div>
+    <div class="side four">this is side four</div>
+    <div class="side five">this is side five</div>
+    <div class="side six">this is side six</div>
+  </div>
+</div>
+</body>
+</html>
